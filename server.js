@@ -32,14 +32,6 @@ const app = express();
 app.use(express.json()); //bodyparser has been deprecated. Is now on express
 app.use(cors());
 
-app.get("/signin", (req, res) => {
-  try {
-    res.send("success!");
-  } catch (err) {
-    next(err);
-  }
-});
-
 app.post("/signin", (req, res) => {
   signin.handleSignin(req, res, database);
 });
