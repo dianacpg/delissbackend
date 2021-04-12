@@ -20,13 +20,6 @@ const database = knex({
   },
 });
 
-database
-  .select("*")
-  .from("users")
-  .then((data) => {
-    console.log(data);
-  });
-
 const app = express();
 
 app.use(express.json()); //bodyparser has been deprecated. Is now on express
