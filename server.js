@@ -33,7 +33,11 @@ app.use(express.json()); //bodyparser has been deprecated. Is now on express
 app.use(cors());
 
 app.get("/signin", (req, res) => {
-  res.send("success!").catch((err) => res.status(400).json("unable to delete"));
+  try {
+    res.send("success!");
+  } catch (err) {
+    next(err);
+  }
 });
 
 app.post("/signin", (req, res) => {
