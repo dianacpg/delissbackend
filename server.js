@@ -66,15 +66,6 @@ app.delete("/favorites/:recipe_id", (req, res) => {
     .catch((err) => res.status(400).json("unable to delete"));
 });
 
-app.listen(3000, () => {
-  console.log("app is running on port 3000");
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`app is running on port ${process.env.PORT}`);
 });
-
-/*
-/ --> this is workin
-/signin --> POST = success/fail (NOT PUT - sends in querystring. We want to send insidebody)
-/register --> POST = user
-/profile/userID -> GET = user
-/recipe --> PUT -> user
-
-*/
