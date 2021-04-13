@@ -44,7 +44,7 @@ app.get("/profile/:id", (req, res) => {
   profile.handleGetProfile(req, res, database);
 });
 
-app.put("/favorites", (req, res) => {
+app.post("/favorites", (req, res) => {
   postfavorite.handlePostFavorites(req, res, database);
 });
 
