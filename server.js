@@ -13,7 +13,7 @@ const userfavorites = require("./controllers/userfavorites");
 const database = knex({
   client: "pg", //we are using postgres
   connection: {
-    host: process.env.DATABASE_URL,
+    connectionString: process.env.DATABASE_URL,
     ssl: true,
   },
 });
