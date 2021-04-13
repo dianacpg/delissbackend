@@ -7,6 +7,7 @@ const signin = require("./controllers/signin");
 const profile = require("./controllers/profile");
 const postfavorite = require("./controllers/postfavorites");
 const userfavorites = require("./controllers/userfavorites");
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 //knex is to connect to the database
 // always assign knex to a variable
