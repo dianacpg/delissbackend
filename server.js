@@ -5,7 +5,7 @@ const knex = require("knex");
 const register = require("./controllers/register");
 const signin = require("./controllers/signin");
 const profile = require("./controllers/profile");
-const postfavorite = require("./controllers/postfavorites");
+const putfavorite = require("./controllers/putfavorites");
 const userfavorites = require("./controllers/userfavorites");
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
@@ -44,8 +44,8 @@ app.get("/profile/:id", (req, res) => {
   profile.handleGetProfile(req, res, database);
 });
 
-app.post("/favorites", (req, res) => {
-  postfavorite.handlePostFavorites(req, res, database);
+app.put("/favorites", (req, res) => {
+  putfavorite.handlePostFavorites(req, res, database);
 });
 
 app.get("/favorites/:id", (req, res) => {
