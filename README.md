@@ -22,6 +22,24 @@ Live demo: https://deliss.netlify.app/
 - PostgreSQL;
 - Deployment: Backend- Heroku, Frontend- Netlify;
 
+## Project architecture:
+
+```
+|-src/
+  |-components/   - main components to be shared
+  |- img/         - images
+  |-pages/        - containers that use shared components
+  |-styles/       - css files
+|-App.js          - container component with routes
+|-index.js        - js entry file
+
+```
+
+## Note:
+
+- With EDAMAM API, it is possible to filter recipes by choosing some labels like vegetarian, no-sugar, paleo, vegan, no-alcohol etc. But some recipes share contraditory labels so our filter won't work 100%.
+  Example: If we filter Vegetarian, we can receive a recipe with "vegetarian" and "piscitarian" labels.
+
 ## Setup
 
 #### To run this project:
