@@ -67,7 +67,7 @@ recipe_image character varying(200) NOT NULL
 
 ```
 const database = knex({
-  client: "pg", //we are using postgres
+  client: "pg"
   connection: {
     host: "127.0.0.1",
     user: "youruser",
