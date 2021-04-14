@@ -77,5 +77,7 @@ const database = knex({
 });
 ```
 
+** The front end part of Deliss App [here](https://github.com/dianacpg/delissfronted) **
+
 
 ![Alt Text](https://media.giphy.com/media/lKQ4k6JMgf1OoeIcVf/giphy.gif)
