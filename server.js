@@ -7,6 +7,8 @@ const signin = require("./controllers/signin");
 const profile = require("./controllers/profile");
 const putfavorite = require("./controllers/putfavorites");
 const userfavorites = require("./controllers/userfavorites");
+const deletebeer = require("./controllers/deletebeer");
+
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 //knex is to connect to the database
@@ -53,13 +55,7 @@ app.get("/favorites/:id", (req, res) => {
 });
 
 app.delete("/favorites/:beer_id", (req, res) => {
-  const { recipe_id } = req.params;
-  database("favorite_beers")
-    .select("*")
-    .where("beer_id", recipe_id)
-    .del()
-    .then((recipes) => res.json(recipes))
-    .catch((err) => res.status(400).json("unable to delete"));
+  deletebeer.handleDeleteBeer(req, res, database);
 });
 
 app.listen(process.env.PORT || 3000, () => {
