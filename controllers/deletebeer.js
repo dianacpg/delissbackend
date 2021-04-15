@@ -1,10 +1,10 @@
-const handleDeleteBeer = (req, res) => {
-  const { recipe_id } = req.params;
+const handleDeleteBeer = (req, res, database) => {
+  const { beer_id } = req.params;
   database("favorite_beers")
     .select("*")
-    .where("beer_id", recipe_id)
+    .where("beer_id", beer_id)
     .del()
-    .then((recipes) => res.json(recipes))
+    .then((beers) => res.json(beers))
     .catch((err) => res.status(400).json("unable to delete"));
 };
 
