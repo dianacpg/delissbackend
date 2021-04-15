@@ -1,12 +1,12 @@
 const handlePostFavorites = (req, res, database) => {
-  const { id, recipe_name, recipe_url, recipe_image } = req.body;
-  database("favorite_recipes")
+  const { id, beer_name, beer_description, beer_image } = req.body;
+  database("favorite_beers")
     .returning("*") //returns every column after insert. Instead of selecting etc etc again.
     .insert({
       id: id,
-      recipe_name: recipe_name,
-      recipe_url: recipe_url,
-      recipe_image: recipe_image,
+      beer_name: beer_name,
+      beer_descripton: beer_name,
+      beer_image: beer_name,
     })
     .then((recipe) => {
       res.json(recipe);

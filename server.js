@@ -52,11 +52,11 @@ app.get("/favorites/:id", (req, res) => {
   userfavorites.handleUserFavorites(req, res, database);
 });
 
-app.delete("/favorites/:recipe_id", (req, res) => {
+app.delete("/favorites/:beer_id", (req, res) => {
   const { recipe_id } = req.params;
-  database("favorite_recipes")
+  database("favorite_beers")
     .select("*")
-    .where("recipe_id", recipe_id)
+    .where("beer_id", recipe_id)
     .del()
     .then((recipes) => res.json(recipes))
     .catch((err) => res.status(400).json("unable to delete"));
