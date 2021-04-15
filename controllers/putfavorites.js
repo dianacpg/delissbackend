@@ -5,8 +5,8 @@ const handlePostFavorites = (req, res, database) => {
     .insert({
       id: id,
       beer_name: beer_name,
-      beer_descripton: beer_name,
-      beer_image: beer_name,
+      beer_description: beer_description,
+      beer_image: beer_image,
     })
     .then((recipe) => {
       res.json(recipe);
