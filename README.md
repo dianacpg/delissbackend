@@ -1,4 +1,4 @@
-# Deliss
+# Deliss Beer
 
 Deliss Beer is an Automatic Beer and Food Match Generator that gives
 you the most suitable craft beer for your meal. You will find
