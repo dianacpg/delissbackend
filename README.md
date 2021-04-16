@@ -1,8 +1,12 @@
 # Deliss
 
-Deliss is an automatic weekly meal plan generator app that gives you meal ideas for breakfast, lunch and dinner. 3 recipes for each day of the week! You can also save your favorite recipes in your acount.
+Deliss Beer is an Automatic Beer and Food Match Generator that gives
+you the most suitable craft beer for your meal. You will find
+option for meat, fish and veggie meals! Discover craft beers from
+all around the world! You can also save your favorite beers in
+your acount.
 
-Live demo: https://deliss.netlify.app/
+Live demo: https://delissbeer.netlify.app/
 
 ## Features:
 
@@ -13,32 +17,28 @@ Live demo: https://deliss.netlify.app/
 - [x] Login and Register Authentication made by scrach;
 - [x] User database for favorite recipes;
 
-## Build with:
+## Features:
 
-- JavaScript - React (create react app);
-- CSS, Tachyons;
-- EDAMAME recipe serch API;
-- Node.js, Express.js;
-- PostgreSQL;
-- Deployment: Backend- Heroku, Frontend- Netlify;
+- [x] Use of Punk Api public API;
+- [x] Beers suitable for meat, fish and veggie meals;
+- [x] Random display of 4 beers from each beer-food-match category;
+- [x] Filter option for Alcohol by volume;
+- [x] Login and Register Authentication made by scrach;
+- [x] User database for favorite beers;
 
 ## Project architecture:
 
 ```
-|-src/
-  |-components/   - main components to be shared
-  |- img/         - images
-  |-pages/        - containers that use shared components
-  |-styles/       - css files
-|-App.js          - container component with routes
-|-index.js        - js entry file
+|-server.js     - Route
+|-controllers/  - Controller functions for requests
 
 ```
 
 ## Note:
 
-- With EDAMAM API, it is possible to filter recipes by choosing some labels like vegetarian, no-sugar, paleo, vegan, no-alcohol etc. But some recipes share contraditory labels so our filter won't work 100%.
-  Example: If we filter Vegetarian, we can receive a recipe with "vegetarian" and "piscitarian" labels.
+-The Punk API takes Brewdog's DIY Dog and turns it into a searchable, filterable API that's completely free and open source.
+
+- The API doesn't have links for more details of each beer.
 
 ## Setup
 
@@ -72,13 +72,12 @@ hash character varying(100) NOT NULL,
 email text NOT NULL UNIQUE
 );
 
-Table favoripe_recipes:
-CREATE TABLE favorite_recipes (
-recipe_id SERIAL PRIMARY KEY,
-id character varying(300) NOT NULL,
-recipe_name character varying(200),
-recipe_url character varying(200) NOT NULL,
-recipe_image character varying(200) NOT NULL
+CREATE TABLE favorite_beers (
+    beer_id SERIAL PRIMARY KEY,
+    id character varying(300) NOT NULL,
+    beer_name character varying(200) NOT NULL,
+    beer_description character varying(200),
+    beer_image character varying(200)
 );
 
 - Set your database on server:
@@ -95,7 +94,7 @@ const database = knex({
 });
 ```
 
-** The front end part of Deliss App [here](https://github.com/dianacpg/delissfrontend) **
+** The front end part of Deliss App [here](https://github.com/dianacpg/deliss_beer) **
 
 
 ![Alt Text](https://media.giphy.com/media/lKQ4k6JMgf1OoeIcVf/giphy.gif)
