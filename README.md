@@ -2,20 +2,11 @@
 
 Deliss Beer is an Automatic Beer and Food Match Generator that gives
 you the most suitable craft beer for your meal. You will find
-option for meat, fish and veggie meals! Discover craft beers from
-all around the world! You can also save your favorite beers in
+options for meat, fish and veggie meals! Discover craft beers from
+all around the world! You can also save your favorites in
 your acount.
 
-Live demo: https://delissbeer.netlify.app/
-
-## Features:
-
-- [x] Use of EDAMAME public API;
-- [x] Weekly meal plans for breakfast, lunch and dinner;
-- [x] Random recipe combinations for meal plan;
-- [x] Personalized meal plans for Vegetarians and Vegans;
-- [x] Login and Register Authentication made by scrach;
-- [x] User database for favorite recipes;
+Live demo: https://deliss.netlify.app/
 
 ## Features:
 
@@ -23,8 +14,17 @@ Live demo: https://delissbeer.netlify.app/
 - [x] Beers suitable for meat, fish and veggie meals;
 - [x] Random display of 4 beers from each beer-food-match category;
 - [x] Filter option for Alcohol by volume;
-- [x] Login and Register Authentication made by scrach;
+- [x] Login and Register Authentication made by scratch;
 - [x] User database for favorite beers;
+
+## Build with:
+
+- JavaScript - React (create react app);
+- CSS, Tachyons;
+- Punk API;
+- Node.js, Express.js;
+- PostgreSQL;
+- Deployment: Backend- Heroku, Frontend- Netlify;
 
 ## Project architecture:
 
@@ -73,11 +73,11 @@ email text NOT NULL UNIQUE
 );
 
 CREATE TABLE favorite_beers (
-    beer_id SERIAL PRIMARY KEY,
-    id character varying(300) NOT NULL,
-    beer_name character varying(200) NOT NULL,
-    beer_description character varying(200),
-    beer_image character varying(200)
+beer_id SERIAL PRIMARY KEY,
+id character varying(300) NOT NULL,
+beer_name character varying(200) NOT NULL,
+beer_description character varying(200),
+beer_image character varying(200)
 );
 
 - Set your database on server:
@@ -95,6 +95,5 @@ const database = knex({
 ```
 
 ** The front end part of Deliss App [here](https://github.com/dianacpg/deliss_beer) **
-
 
 ![Alt Text](https://media.giphy.com/media/3o85xjSETVG3OpPyx2/giphy.gif)
