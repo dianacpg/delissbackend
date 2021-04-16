@@ -97,4 +97,4 @@ const database = knex({
 ** The front end part of Deliss App [here](https://github.com/dianacpg/deliss_beer) **
 
 
-![Alt Text](https://media.giphy.com/media/lKQ4k6JMgf1OoeIcVf/giphy.gif)
+![Alt Text](https://media.giphy.com/media/3o85xjSETVG3OpPyx2/giphy.gif)
